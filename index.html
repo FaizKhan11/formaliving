@@ -1,0 +1,666 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FORMA LIVING | Furniture for Every Home</title>
+<meta name="description" content="Discover modern, affordable, made-to-order furniture by FORMA LIVING. Serving Mumbai, India.">
+
+<style>
+:root {
+  --brown: #3E2F25;
+  --beige: #DCC9B1;
+  --ivory: #F8F6F1;
+  --taupe: #A69A88;
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: var(--brown);
+  background: var(--ivory);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* HEADER */
+
+header {
+  height: 85px;
+  padding: 0 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--ivory);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+}
+
+.logo {
+  font-family: Georgia, serif;
+  font-size: 27px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.logo span {
+  display: block;
+  font-family: Arial, sans-serif;
+  font-size: 9px;
+  letter-spacing: 4px;
+  text-align: center;
+  font-weight: normal;
+}
+
+nav {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  font-size: 13px;
+}
+
+nav a:hover {
+  color: var(--taupe);
+}
+
+.nav-button, .primary-button {
+  background: var(--brown);
+  color: white;
+  padding: 13px 24px;
+  display: inline-block;
+  border: none;
+  letter-spacing: 1px;
+  font-size: 12px;
+  transition: 0.3s;
+}
+
+.nav-button:hover, .primary-button:hover {
+  background: #685044;
+}
+
+/* HERO */
+
+.hero {
+  min-height: 620px;
+  display: flex;
+  align-items: center;
+  padding: 80px 9%;
+  background:
+    linear-gradient(90deg, rgba(20,15,12,.75), rgba(20,15,12,.08)),
+    url("https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=2000&q=90")
+    center/cover;
+  color: white;
+}
+
+.hero-content {
+  max-width: 570px;
+}
+
+.eyebrow {
+  letter-spacing: 4px;
+  font-size: 11px;
+  margin-bottom: 22px;
+}
+
+.hero h1 {
+  font-family: Georgia, serif;
+  font-size: clamp(42px, 6vw, 72px);
+  line-height: 1.12;
+  font-weight: normal;
+  margin-bottom: 25px;
+}
+
+.hero p {
+  font-size: 16px;
+  max-width: 460px;
+  margin-bottom: 32px;
+  color: #f0eae2;
+}
+
+.hero .primary-button {
+  background: var(--beige);
+  color: var(--brown);
+}
+
+/* COMMON SECTION */
+
+section {
+  padding: 90px 8%;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.section-heading small {
+  letter-spacing: 3px;
+  color: var(--taupe);
+  font-size: 11px;
+}
+
+.section-heading h2 {
+  font-family: Georgia, serif;
+  font-size: 38px;
+  font-weight: normal;
+  margin: 10px 0;
+}
+
+.section-heading p {
+  color: #756b61;
+  font-size: 14px;
+}
+
+/* CATEGORIES */
+
+.categories {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.category-card {
+  background: white;
+  overflow: hidden;
+}
+
+.category-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+  transition: transform .5s;
+}
+
+.category-card:hover img {
+  transform: scale(1.04);
+}
+
+.category-info {
+  padding: 20px;
+  text-align: center;
+}
+
+.category-info h3 {
+  font-family: Georgia, serif;
+  font-size: 22px;
+  font-weight: normal;
+  margin-bottom: 8px;
+}
+
+.category-info a {
+  font-size: 11px;
+  letter-spacing: 2px;
+  border-bottom: 1px solid var(--taupe);
+  padding-bottom: 4px;
+}
+
+/* ABOUT */
+
+.about {
+  background: #eee7dd;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 65px;
+}
+
+.about img {
+  width: 100%;
+  height: 440px;
+  object-fit: cover;
+}
+
+.about h2 {
+  font-family: Georgia, serif;
+  font-size: 43px;
+  line-height: 1.2;
+  font-weight: normal;
+  margin: 15px 0 20px;
+}
+
+.about p {
+  color: #71665c;
+  margin-bottom: 25px;
+  font-size: 14px;
+}
+
+/* PROCESS */
+
+.process {
+  background: white;
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  text-align: center;
+}
+
+.process-item .number {
+  font-family: Georgia, serif;
+  font-size: 35px;
+  color: var(--taupe);
+}
+
+.process-item h3 {
+  font-family: Georgia, serif;
+  font-weight: normal;
+  font-size: 21px;
+  margin: 10px 0;
+}
+
+.process-item p {
+  font-size: 13px;
+  color: #777;
+}
+
+/* CTA */
+
+.cta {
+  text-align: center;
+  background:
+    linear-gradient(rgba(30,22,17,.72), rgba(30,22,17,.72)),
+    url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1800&q=85")
+    center/cover;
+  color: white;
+}
+
+.cta h2 {
+  font-family: Georgia, serif;
+  font-size: 43px;
+  font-weight: normal;
+  margin-bottom: 15px;
+}
+
+.cta p {
+  margin-bottom: 28px;
+  color: #eee;
+}
+
+.cta .primary-button {
+  background: var(--beige);
+  color: var(--brown);
+}
+
+/* FOOTER */
+
+footer {
+  background: var(--brown);
+  color: white;
+  padding: 55px 8% 25px;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 50px;
+  margin-bottom: 40px;
+}
+
+footer h3 {
+  font-family: Georgia, serif;
+  font-weight: normal;
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+footer h4 {
+  margin-bottom: 15px;
+  font-size: 13px;
+}
+
+footer p, footer a {
+  font-size: 13px;
+  color: #ded3c7;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.copyright {
+  border-top: 1px solid #665448;
+  padding-top: 20px;
+  text-align: center;
+  color: #cbbdb1;
+  font-size: 11px;
+}
+
+/* WHATSAPP BUTTON */
+
+.whatsapp {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 200;
+  background: #25D366;
+  color: white;
+  padding: 14px 21px;
+  border-radius: 50px;
+  font-size: 13px;
+  box-shadow: 0 5px 20px rgba(0,0,0,.2);
+}
+
+/* MOBILE */
+
+@media(max-width: 900px) {
+  .categories {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+  }
+
+  .process-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  nav {
+    gap: 13px;
+  }
+}
+
+@media(max-width: 600px) {
+  header {
+    height: auto;
+    padding: 18px 5%;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 11px;
+  }
+
+  .nav-button {
+    display: none;
+  }
+
+  .hero {
+    min-height: 520px;
+    padding: 55px 7%;
+  }
+
+  .categories {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .category-card img {
+    height: 190px;
+  }
+
+  section {
+    padding: 65px 6%;
+  }
+
+  .section-heading h2, .about h2, .cta h2 {
+    font-size: 32px;
+  }
+
+  .process-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 25px 15px;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .about img {
+    height: 300px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <a href="#" class="logo">
+    FORMA LIVING
+    <span>FURNITURE FOR EVERY HOME</span>
+  </a>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#collections">Collections</a>
+    <a href="#about">About Us</a>
+    <a href="#process">How It Works</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <a class="nav-button" href="#contact">GET A QUOTE</a>
+</header>
+
+<!-- HERO -->
+
+<div class="hero" id="home">
+  <div class="hero-content">
+    <div class="eyebrow">DESIGNED FOR YOUR HOME</div>
+
+    <h1>Furniture that feels like home.</h1>
+
+    <p>
+      Modern designs. Thoughtful craftsmanship.
+      Made-to-order furniture created around your
+      space, style and everyday needs.
+    </p>
+
+    <a class="primary-button" href="#collections">
+      EXPLORE COLLECTION
+    </a>
+  </div>
+</div>
+
+<!-- COLLECTIONS -->
+
+<section id="collections">
+  <div class="section-heading">
+    <small>OUR COLLECTIONS</small>
+    <h2>Made for Your Space</h2>
+    <p>Discover furniture designed around the way you live.</p>
+  </div>
+
+  <div class="categories">
+
+    <div class="category-card">
+      <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=85" alt="Modern TV unit">
+      <div class="category-info">
+        <h3>TV Units</h3>
+        <a href="#contact">ENQUIRE NOW</a>
+      </div>
+    </div>
+
+    <div class="category-card">
+      <img src="https://images.unsplash.com/photo-1631679706909-1844bbd07221?auto=format&fit=crop&w=800&q=85" alt="Modern bedroom wardrobe">
+      <div class="category-info">
+        <h3>Wardrobes</h3>
+        <a href="#contact">ENQUIRE NOW</a>
+      </div>
+    </div>
+
+    <div class="category-card">
+      <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=800&q=85" alt="Modern bed">
+      <div class="category-info">
+        <h3>Beds</h3>
+        <a href="#contact">ENQUIRE NOW</a>
+      </div>
+    </div>
+
+    <div class="category-card">
+      <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=85" alt="Custom furniture">
+      <div class="category-info">
+        <h3>Custom Furniture</h3>
+        <a href="#contact">ENQUIRE NOW</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+  <img
+    src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1000&q=85"
+    alt="Modern minimalist living room furniture">
+
+  <div>
+    <small>OUR STORY</small>
+
+    <h2>Thoughtfully designed. Made for living.</h2>
+
+    <p>
+      At FORMA LIVING, we believe that great furniture
+      should be beautifully designed, functional and
+      accessible to every home.
+    </p>
+
+    <p>
+      We specialise in made-to-order furniture.
+      From TV units and wardrobes to beds and
+      customised storage, we help you create furniture
+      that fits your space and lifestyle.
+    </p>
+
+    <p>
+      Choose your preferred dimensions, designs and
+      finishes. We work with you to bring your ideas
+      to life.
+    </p>
+
+    <a href="#contact" class="primary-button">
+      LET'S CREATE YOUR FURNITURE
+    </a>
+  </div>
+
+</section>
+
+<!-- PROCESS -->
+
+<section class="process" id="process">
+  <div class="section-heading">
+    <small>OUR PROCESS</small>
+    <h2>From Your Idea to Your Home</h2>
+    <p>Simple, transparent and personalised.</p>
+  </div>
+
+  <div class="process-grid">
+
+    <div class="process-item">
+      <div class="number">01</div>
+      <h3>Share Your Idea</h3>
+      <p>Tell us about your space, requirements and preferred design.</p>
+    </div>
+
+    <div class="process-item">
+      <div class="number">02</div>
+      <h3>Design & Quote</h3>
+      <p>Discuss dimensions, materials, finishes and pricing.</p>
+    </div>
+
+    <div class="process-item">
+      <div class="number">03</div>
+      <h3>Craft Your Furniture</h3>
+      <p>Your approved furniture design goes into production.</p>
+    </div>
+
+    <div class="process-item">
+      <div class="number">04</div>
+      <h3>Delivery & Installation</h3>
+      <p>We coordinate delivery and installation at your home.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+
+<section class="cta" id="contact">
+  <h2>Let's Create Something Beautiful.</h2>
+  <p>Have a furniture idea? Tell us what you need.</p>
+
+  <a
+    class="primary-button"
+    href="https://wa.me/91YOURNUMBER?text=Hello%20FORMA%20LIVING%2C%20I%20am%20interested%20in%20custom%20furniture."
+    target="_blank">
+    CHAT WITH US ON WHATSAPP
+  </a>
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+  <div class="footer-content">
+
+    <div>
+      <h3>FORMA LIVING</h3>
+      <p>Furniture for Every Home.</p>
+      <p style="margin-top:12px;">
+        Modern, functional and made-to-order
+        furniture for homes across Mumbai.
+      </p>
+    </div>
+
+    <div>
+      <h4>EXPLORE</h4>
+      <div class="footer-links">
+        <a href="#collections">TV Units</a>
+        <a href="#collections">Wardrobes</a>
+        <a href="#collections">Beds</a>
+        <a href="#collections">Custom Furniture</a>
+      </div>
+    </div>
+
+    <div>
+      <h4>CONTACT</h4>
+      <div class="footer-links">
+        <a href="#contact">WhatsApp Enquiry</a>
+        <a href="mailto:YOURBUSINESSEMAIL">Email Us</a>
+        <p>Mumbai, Maharashtra, India</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="copyright">
+    © 2026 FORMA LIVING. All Rights Reserved.
+  </div>
+</footer>
+
+<a
+  class="whatsapp"
+  href="https://wa.me/91YOURNUMBER?text=Hello%20FORMA%20LIVING"
+  target="_blank">
+  WhatsApp Us
+</a>
+
+</body>
+</html>
